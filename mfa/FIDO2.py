@@ -177,5 +177,5 @@ def authenticate_complete(request):
                     return HttpResponse(simplejson.dumps({'status': "OK"}),
                                         content_type = "application/json")
     except Exception as exp:
-        return HttpResponse(simplejson.dumps({'status': "ERR", "message": exp.message}),
+        return HttpResponse(simplejson.dumps({'status': "ERR", "message": str(exp)}),
                             content_type = "application/json")

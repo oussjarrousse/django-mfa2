@@ -1,6 +1,7 @@
 import time
 from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
+from django.urls import reverse
+# from django.core.urlresolvers import reverse
 from django.conf import settings
 def process(request):
     next_check=request.session.get('mfa',{}).get("next_check",False)
